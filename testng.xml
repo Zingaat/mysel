@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="suite-01" verbose="1">
+	<parameter name="driverName" value="chromeDriver" />
+	<test name="booking">
+		<packages>
+			<package name="example.demo.tests" />
+		</packages>
+	</test>
+</suite>
