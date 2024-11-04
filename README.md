@@ -1,4 +1,6 @@
-## This example automates a flight booking scenario
+## This example automates a flight booking scenario 
+
+website `https://blazedemo.com/`
 
 ## Steps to setup and run the project in local machine
 
