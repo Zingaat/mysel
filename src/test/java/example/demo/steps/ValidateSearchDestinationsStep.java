@@ -14,13 +14,13 @@ import org.testng.Assert;
 public class ValidateSearchDestinationsStep extends AbstractStep {
 
 	public void execute(final WebDriver driver) {
-		List<WebElement> departures = new Select(
+		List<WebElement> destinations = new Select(
 				driver.findElement(By.xpath(val("app.search.destinations-select.xpath")))).getOptions();
 
-		List<String> departureAssertList = Arrays.asList(val("app.search.destinations").split("\\s*,\\s*"));
+		List<String> destinationAssertList = Arrays.asList(val("app.search.destinations").split("\\s*,\\s*"));
 		int i = 0;
-		for (final WebElement elem : departures)
-			Assert.assertEquals(elem.getText(), departureAssertList.get(i++));
+		for (final WebElement elem : destinations)
+			Assert.assertEquals(elem.getText(), destinationAssertList.get(i++));
 
 	}
 
