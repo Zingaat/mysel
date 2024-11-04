@@ -30,7 +30,7 @@ public class BookingTest extends BaseTest {
 	@Autowired
 	private PurchaseFlightStep purchaseFlightStep;
 	@Autowired
-	private ValidateSearchDestinationsStep validateSearchPage;
+	private ValidateSearchDestinationsStep validateSearchDestinationsStep;
 
 	// this test can be run for multiple supported browsers using the driverName
 	// parameter.
@@ -48,9 +48,9 @@ public class BookingTest extends BaseTest {
 
 	@Parameters({ "driverName" })
 	@Test(groups = { "booking" })
-	public void validateDepartures(final String driverName) {
+	public void validateDestinations(final String driverName) {
 		final WebDriver webDriver = webDriver(driverName);
 		openSearchPageStep.execute(webDriver);
-		validateSearchPage.execute(webDriver);
+		validateSearchDestinationsStep.execute(webDriver);
 	}
 }
